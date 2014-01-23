@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/introHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome_message"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/introBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/introHead"
+        android:layout_marginTop="19dp"
+        android:text="@string/navi_description"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageButton
+        android:id="@+id/infoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/settingsButton"
+        android:layout_toRightOf="@+id/settingsButton"
+        android:contentDescription="@string/dev_name"
+        android:src="@android:drawable/ic_dialog_info" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/action_settings"
+        android:src="@android:drawable/ic_menu_preferences" />
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/settingsButton"
+        android:layout_toLeftOf="@+id/settingsButton"
+        android:contentDescription="@string/tutorial"
+        android:src="@android:drawable/ic_menu_help" />
+
+    <ImageButton
+        android:id="@+id/naviOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/infoButton"
+        android:layout_alignRight="@+id/infoButton"
+        android:contentDescription="@string/toggle_navi_off"
+        android:src="@drawable/ic_launcher_red" />
+
+    <ImageButton
+        android:id="@+id/naviOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/helpButton"
+        android:layout_alignTop="@+id/naviOff"
+        android:contentDescription="@string/toggle_navi_on"
+        android:src="@drawable/ic_launcher_green" />
+
+</RelativeLayout>
